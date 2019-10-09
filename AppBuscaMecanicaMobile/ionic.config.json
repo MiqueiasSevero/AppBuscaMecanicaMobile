@@ -1,0 +1,7 @@
+{
+  "name": "AppBuscaMecanicaMobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
