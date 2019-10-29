@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +9,9 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private qrScanner: QRScanner) { }
+  constructor(private qrScanner: QRScanner,private navCtrl: NavController) { }
 
-  PegaUsuario(){
+ /* PegaUsuario(){
     this.qrScanner.prepare()
   .then((status: QRScannerStatus) => {
      if (status.authorized) {
@@ -31,11 +32,14 @@ export class LoginPage implements OnInit {
   })
   .catch((e: any) => console.log('Error is', e));
 
-  }
+  }*/
   
   
   
   ngOnInit() {
   }
   
+  ChamaCadastro() {
+    this.navCtrl.navigateForward("/cadastrar");
+  }
 }

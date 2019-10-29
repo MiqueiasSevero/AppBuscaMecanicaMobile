@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.page.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCrtl:NavController) { }
 
   ngOnInit() {
   }
-
+  ChamaCadastro() {
+    this.navCrtl.navigateForward("/cadastrar");
+  }
 }
