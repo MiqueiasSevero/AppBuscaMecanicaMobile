@@ -9,49 +9,85 @@
 
 <ion-content>
 
-		
+<div *ngIf="etapaCadastro === 1">
+        <ion-item>
+            <ion-label position="stacked">Nome</ion-label>
+            <ion-input color="ligth" name="nomeCadastro"></ion-input>
+        
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Sobre nome</ion-label>
+            <ion-input color="ligth" name="sNomeCadastro"></ion-input>
+        
+        </ion-item>
+         <ion-item>
+            <ion-label position="stacked">Senha</ion-label>
+            <ion-input  type="password" color="ligth" name="senhaCadastro"></ion-input>
+        
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Confirma Senha</ion-label>
+            <ion-input type="password" color="ligth" name="confirmaSenhaCadastro"></ion-input>
+        
+        </ion-item>
 
-<!-- Default Input -->
-<ion-input></ion-input>
+      
+         <ion-button expand="full" (click)="recebeDados(etapaCadastro)" color="primary">Proxímo</ion-button>
+</div>
 
-<!-- Input with value -->
-<ion-input value="custom"></ion-input>
-
-<!-- Input with placeholder -->
-<ion-input placeholder="Enter Input"></ion-input>
-
-<!-- Input with clear button when there is a value -->
-<ion-input clearInput value="clear me"></ion-input>
-
-<!-- Number type input -->
-<ion-input type="number" value="333"></ion-input>
-
-<!-- Disabled input -->
-<ion-input value="Disabled" disabled></ion-input>
-
-<!-- Readonly input -->
-<ion-input value="Readonly" readonly></ion-input>
-
-<!-- Inputs with labels -->
+<div *ngIf="etapaCadastro === 2">
+ <ion-button expand="full" (click)="voltaDadosAnterior(etapaCadastro)" color="primary">Anterior</ion-button>
 <ion-item>
-  <ion-label>Default Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+            <ion-label position="stacked">CEP</ion-label>
+            <ion-input color="ligth" name="cepCadastro"></ion-input>
+        
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">RUA</ion-label>
+            <ion-input color="ligth" name="ruaCadastro"></ion-input>
+        
+        </ion-item>
+         <ion-item>
+            <ion-label position="stacked">BAIRRO</ion-label>
+            <ion-input   color="ligth" name="bairroCadastro"></ion-input>
+        
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">CIDADE</ion-label>
+            <ion-input  color="ligth" name="cidadeCadastro"></ion-input>
+        
+        </ion-item>
+         <ion-item>
+            <ion-label position="stacked">ESTADO</ion-label>
+            <ion-input  color="ligth" name="estadoCadastro"></ion-input>
+        
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">NÚMERO</ion-label>
+            <ion-input  color="ligth" name="numeroCadastro"></ion-input>
+        
+        </ion-item>
 
-<ion-item>
-  <ion-label position="floating">Floating Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+      
+         <ion-button expand="full" (click)="recebeDados(etapaCadastro)" color="primary">Proxímo</ion-button>
+</div>
 
-<ion-item>
-  <ion-label position="fixed">Fixed Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<div *ngIf="etapaCadastro === 3">
+     <ion-button expand="full" (click)="voltaDadosAnterior(etapaCadastro)" color="primary">Anterior</ion-button>
 
-<ion-item>
-  <ion-label position="stacked">Stacked Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+
+    <ion-button expand="full" (click)="recebeDados(etapaCadastro)" color="primary">Proxímo</ion-button>
+</div>
+
+<div *ngIf="etapaCadastro === 4">
+cadastro realizado com sucesso!
+
+clique aqui para fazer login
+<button>Ir para login</button>
+</div>
+
+
+
 
 
 

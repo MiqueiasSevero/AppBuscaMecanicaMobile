@@ -1,1 +1,15 @@
 @import '../app.component';
+
+.loginHeaderImg{
+ padding: 20px;;
+}
+
+.loginHeaderImg img {
+    position: relative; 
+    height: 50px; 
+    width: 50px;
+    right: 15px; 
+    left: 15px; 
+    margin: auto; 
+    top: 25px;
+}
