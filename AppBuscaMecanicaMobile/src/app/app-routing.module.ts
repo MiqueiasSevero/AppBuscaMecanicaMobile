@@ -4,8 +4,9 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
  
-  { path: '', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'cadastrar', loadChildren: './cadastrar/cadastrar.module#CadastrarPageModule' },  { path: 'usuario', loadChildren: './services/usuario/usuario/usuario.module#UsuarioPageModule' }
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'cadastrar', loadChildren: './cadastrar/cadastrar.module#CadastrarPageModule' },
+  { path: '', loadChildren: './services/usuario/usuario/usuario.module#UsuarioPageModule' }
 
  
 
