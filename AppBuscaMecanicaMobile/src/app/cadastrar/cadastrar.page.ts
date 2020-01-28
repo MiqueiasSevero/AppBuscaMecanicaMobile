@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class CadastrarPage implements OnInit {
 
-    etapaCadastro: number = 1;
+    etapaCadastro: number = 4;
     formCadastroCliente = new FormGroup({
       placaCadastro: new FormControl('', Validators.required),
       nomeCadastro: new FormControl('', Validators.required),
@@ -34,8 +34,7 @@ export class CadastrarPage implements OnInit {
   }
   
   mostarDadosCad(){
-    let form = this.formCadastroCliente.value;
-    console.log(form);
+    
   }
    
 
