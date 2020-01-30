@@ -5,8 +5,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
  
   { path: '', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'cadastrar', loadChildren: './cadastrar/cadastrar.module#CadastrarPageModule' }
+  { path: 'cadastrar', loadChildren: './cadastrar/cadastrar.module#CadastrarPageModule' },
+  { path: 'tabs' , loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)},
+  { path: '', loadChildren:'./perfil/perfil.module#PerfilPageModule'},
+  { path: 'historico-servicos', loadChildren: './historico-servicos/historico-servicos.module#HistoricoServicosPageModule' },
+  { path: 'servico', loadChildren: './servico/servico.module#ServicoPageModule' }
 
+ 
  
 
 ];

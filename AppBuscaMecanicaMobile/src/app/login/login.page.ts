@@ -17,7 +17,9 @@ export class LoginPage implements OnInit {
   
   ngOnInit() {
   }
-  
+  login(){
+    this.navCtrl.navigateForward("/tabs");
+  }
   ChamaCadastro() {
     this.navCtrl.navigateForward("/cadastrar");
   }

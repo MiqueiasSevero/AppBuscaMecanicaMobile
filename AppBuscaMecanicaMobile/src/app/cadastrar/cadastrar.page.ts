@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class CadastrarPage implements OnInit {
 
-    etapaCadastro: number = 4;
+    etapaCadastro: number = 1;
     formCadastroCliente = new FormGroup({
       placaCadastro: new FormControl('', Validators.required),
       nomeCadastro: new FormControl('', Validators.required),
