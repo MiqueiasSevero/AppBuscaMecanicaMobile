@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {DomSanitizer} from '@angular/platform-browser';
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.page.html',
   styleUrls: ['./cadastrar.page.scss'],
 })
 export class CadastrarPage implements OnInit {
-
-    etapaCadastro: number = 1;
-    formCadastroCliente = new FormGroup({
+      statusTrFs:boolean = true;
+      etapaCadastro: number = 4;
+      formCadastroCliente = new FormGroup({
       placaCadastro: new FormControl('', Validators.required),
       nomeCadastro: new FormControl('', Validators.required),
       sNomeCadastro: new FormControl('', Validators.required),
@@ -28,7 +29,7 @@ export class CadastrarPage implements OnInit {
      
     });
 
-  constructor(public navCrtl:NavController) { }
+  constructor(public navCrtl:NavController, public sanitizer:DomSanitizer ) { }
 
   ngOnInit() {
   }
@@ -49,6 +50,7 @@ export class CadastrarPage implements OnInit {
 
   vaiParaEtapa(etapa: number) {
     this.etapaCadastro = etapa;
+    this.statusTrFs = false;
   }
 
   ChamaCadastro() {
