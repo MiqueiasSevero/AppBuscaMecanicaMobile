@@ -26,15 +26,16 @@
 
               </ion-toolbar>
 
-            </ion-item>
+            </ion-item> -->
+
+<ion-header>
+  
 
 <ion-toolbar>
   <ion-searchbar placeholder="Procurar Serviços" color="light"></ion-searchbar>
 </ion-toolbar>
 
-</ion-header> -->
-
-
+</ion-header> 
 
 
 <ion-content>
@@ -42,28 +43,33 @@
   
 
   <ion-item>
-    <ion-card>
+    
+    <ion-card (click)="Chamadescricaoservico()">
      <div class="imgbalanceamento">
          <ion-img src="./assets/img/servicos-balanceamento.png"></ion-img>
      </div>
+     
       <ion-card-header>
        <ion-card-title>Balanceamento</ion-card-title>
       </ion-card-header>
       <ion-card-content>
           Confira nosso serviço de balanceamento
          </ion-card-content>
-    
+        
      
     </ion-card>
+ 
+    
+
     </ion-item>
     
     <ion-item>
-        <ion-card>
+        <ion-card (click)="Chamadescricaoservico()">
          <div class="imgbalanceamento">
              <ion-img src="./assets/img/servicos-balanceamento.png"></ion-img>
          </div>
           <ion-card-header>
-           <ion-card-title>Balanceamento</ion-card-title>
+           <ion-card-title>Alinhamento</ion-card-title>
           </ion-card-header>
         
           <ion-card-content>
@@ -73,27 +79,27 @@
         </ion-item>
     
         <ion-item>
-            <ion-card>
+            <ion-card (click)="Chamadescricaoservico()">
              <div class="imgbalanceamento">
                  <ion-img src="./assets/img/servicos-balanceamento.png"></ion-img>
              </div>
               <ion-card-header>
-               <ion-card-title>Balanceamento</ion-card-title>
+               <ion-card-title>Troca de Óleo</ion-card-title>
               </ion-card-header>
             
-              <ion-card-content>
+              <ion-card-content (click)="Chamadescricaoservico()">
                Confira nosso serviço de balanceamento
               </ion-card-content>
             </ion-card>
             </ion-item>
     
             <ion-item>
-                <ion-card>
+                <ion-card (click)="Chamadescricaoservico()">
                  <div class="imgbalanceamento">
                      <ion-img src="./assets/img/servicos-balanceamento.png"></ion-img>
                  </div>
                   <ion-card-header>
-                   <ion-card-title>Balanceamento</ion-card-title>
+                   <ion-card-title>Calibragem</ion-card-title>
                   </ion-card-header>
                 
                   <ion-card-content>

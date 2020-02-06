@@ -9,7 +9,9 @@ const routes: Routes = [
   { path: 'tabs' , loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)},
   { path: '', loadChildren:'./perfil/perfil.module#PerfilPageModule'},
   { path: 'historico-servicos', loadChildren: './historico-servicos/historico-servicos.module#HistoricoServicosPageModule' },
-  { path: 'servico', loadChildren: './servico/servico.module#ServicoPageModule' }
+  { path: 'servico', loadChildren: './servico/servico.module#ServicoPageModule' },  { path: 'descricao-servico', loadChildren: './descricao-servico/descricao-servico.module#DescricaoServicoPageModule' },
+  { path: 'confirmar-agendamento', loadChildren: './confirmar-agendamento/confirmar-agendamento.module#ConfirmarAgendamentoPageModule' }
+
 
  
  

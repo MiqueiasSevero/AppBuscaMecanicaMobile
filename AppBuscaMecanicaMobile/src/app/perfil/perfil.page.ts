@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-perfil',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilPage implements OnInit {
 
-  constructor() { }
+
+
+
+
+
+  
+
+
+  constructor(public navCrtl:NavController) { }
 
   ngOnInit() {
   }

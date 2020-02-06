@@ -8,8 +8,8 @@
 </ion-header>
 
 <ion-content>
-<form [formGroup]="formCadastroCliente" (ngSubmit)="mostarDadosCad()">
-        <div *ngIf="etapaCadastro === 1">
+<form [formGroup]="formCadastroCliente">
+     
                 <ion-item>
                     <ion-label position="stacked">Nome</ion-label>
                     <ion-input color="ligth" formControlName="nomeCadastro"></ion-input>
