@@ -21,6 +21,6 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateForward("/tabs");
   }
   ChamaCadastro() {
-    this.navCtrl.navigateForward("/cadastrar");
+    this.navCtrl.navigateForward("/cadastro-geral");
   }
 }

@@ -5,12 +5,15 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
  
   { path: '', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'cadastrar', loadChildren: './cadastrar/cadastrar.module#CadastrarPageModule' },
+  { path: 'cadastro-usuario', loadChildren: './cadastro-usuario/cadastro-usuario.module#CadastrarPageModule' },
+  { path: 'cadastro-mecanico', loadChildren: './cadastro-mecanico/cadastro-mecanico.module#CadastrarPageModule' },
   { path: 'tabs' , loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)},
   { path: '', loadChildren:'./perfil/perfil.module#PerfilPageModule'},
   { path: 'historico-servicos', loadChildren: './historico-servicos/historico-servicos.module#HistoricoServicosPageModule' },
-  { path: 'servico', loadChildren: './servico/servico.module#ServicoPageModule' },  { path: 'descricao-servico', loadChildren: './descricao-servico/descricao-servico.module#DescricaoServicoPageModule' },
-  { path: 'confirmar-agendamento', loadChildren: './confirmar-agendamento/confirmar-agendamento.module#ConfirmarAgendamentoPageModule' }
+  { path: 'servico', loadChildren: './servico/servico.module#ServicoPageModule' },
+  { path: 'descricao-servico', loadChildren: './descricao-servico/descricao-servico.module#DescricaoServicoPageModule' },
+  { path: 'confirmar-agendamento', loadChildren: './confirmar-agendamento/confirmar-agendamento.module#ConfirmarAgendamentoPageModule' },  { path: 'cadastro-geral', loadChildren: './cadastro-geral/cadastro-geral.module#CadastroGeralPageModule' }
+
 
 
  

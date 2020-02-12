@@ -1,0 +1,232 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="formCadastroCliente">
+    <div *ngIf="etapaCadastro === 1">
+                <ion-item>
+                    <ion-label position="stacked">Nome</ion-label>
+                    <ion-input color="ligth" formControlName="nomeCadastro"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Sobre nome</ion-label>
+                    <ion-input color="ligth" formControlName="sNomeCadastro"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Senha</ion-label>
+                    <ion-input  type="password" color="ligth" formControlName="senhaCadastro"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Confirma Senha</ion-label>
+                    <ion-input type="password" color="ligth" formControlName="confirmaSenhaCadastro"></ion-input>
+                
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">TELEFONE</ion-label>
+                    <ion-input  color="ligth" formControlName="telefoneCadastro"></ion-input>
+                
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">CELULAR</ion-label>
+                    <ion-input color="ligth" formControlName="celularCadastro"> </ion-input>
+                
+                </ion-item>
+
+
+
+
+            
+                <ion-button expand="full" (click)="recebeDados()" color="primary">Proxímo</ion-button>
+                <ion-button expand="full" (click)="vaiParaEtapa(4)" color="primary" [hidden]="statusTrFs">Ir para final</ion-button>
+                
+        </div>
+
+        <div *ngIf="etapaCadastro === 2">
+        <ion-button expand="full" (click)="voltaDadosAnterior()" color="primary">Anterior</ion-button>
+
+
+               
+
+                
+                <ion-item>
+                    <ion-label position="stacked">NOME DA OFICINA</ion-label>
+                    <ion-input color="ligth" formControlName="nomeOficina"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">CNPJ</ion-label>
+                    <ion-input color="ligth" formControlName="cnpjOficina"></ion-input>
+                
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">CEP</ion-label>
+                    <ion-input color="ligth" formControlName="cepOficina"></ion-input>
+                
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">RUA</ion-label>
+                    <ion-input color="ligth" formControlName="ruaCadastro"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">BAIRRO</ion-label>
+                    <ion-input   color="ligth" formControlName="bairroCadastro"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">CIDADE</ion-label>
+                    <ion-input  color="ligth" formControlName="cidadeCadastro"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">ESTADO</ion-label>
+                    <ion-input  color="ligth" formControlName="estadoCadastro"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">NÚMERO</ion-label>
+                    <ion-input  color="ligth" formControlName="numeroCadastro"></ion-input>
+                
+                </ion-item>
+
+            
+                <ion-button expand="full" (click)="recebeDados()" color="primary">Proxímo</ion-button>
+        </div>
+
+      
+
+        <div *ngIf="etapaCadastro === 3">
+            <ion-card>
+                    <ion-card-content>
+                        <ion-item>
+                            <ion-label position="stacked">Nome</ion-label>
+                            <ion-input color="ligth" value="{{formCadastroCliente.value['nomeCadastro']}}" disabled="true"></ion-input>
+                        
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="stacked">Sobre nome</ion-label>
+                            <ion-input color="ligth" value="{{formCadastroCliente.value['sNomeCadastro']}}" disabled="true"></ion-input>
+                        
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="stacked">Senha</ion-label>
+                            <ion-input  type="password" color="ligth" value="{{formCadastroCliente.value['senhaCadastro']}}" disabled="true"></ion-input>
+                        
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="stacked">Confirma Senha</ion-label>
+                            <ion-input type="password" color="ligth" value="{{formCadastroCliente.value['confirmaSenhaCadastro']}}" disabled="true"></ion-input>
+                        
+                        </ion-item>   
+                
+                    <ion-button color="primary" (click)="vaiParaEtapa(1)" size="block">Editar</ion-button>
+                </ion-card-content>  
+            </ion-card>
+
+            
+       <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-label position="stacked">CEP</ion-label>
+                    <ion-input color="ligth" value="{{formCadastroCliente.value['cepCadastro']}}" disabled="true"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">RUA</ion-label>
+                    <ion-input color="ligth" value="{{formCadastroCliente.value['ruaCadastro']}}" disabled="true"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">BAIRRO</ion-label>
+                    <ion-input   color="ligth" value="{{formCadastroCliente.value['bairroCadastro']}}" disabled="true"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">CIDADE</ion-label>
+                    <ion-input  color="ligth" value="{{formCadastroCliente.value['cidadeCadastro']}}" disabled="true"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">ESTADO</ion-label>
+                    <ion-input  color="ligth" value="{{formCadastroCliente.value['estadoCadastro']}}" disabled="true"></ion-input>
+                
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">NÚMERO</ion-label>
+                    <ion-input  color="ligth" value="{{formCadastroCliente.value['numeroCadastro']}}" disabled="true" ></ion-input>
+                
+                </ion-item>
+                
+                <ion-button color="primary" (click)="vaiParaEtapa(2)" size="block">Editar</ion-button>
+            </ion-card-content>    
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+            <ion-item>
+                <ion-label position="stacked">PLACA</ion-label>
+                <ion-input color="ligth" value="{{formCadastroCliente.value['placaCadastro']}}" disabled="true"></ion-input>
+            
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">MARCA</ion-label>
+                <ion-input color="ligth" value="{{formCadastroCliente.value['marcaCadastro']}}" disabled="true"></ion-input>
+            
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">MODELO</ion-label>
+                <ion-input   color="ligth" value="{{formCadastroCliente.value['modeloCadastro']}}" disabled="true"></ion-input>
+            
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">ANO FABRICAÇÃO</ion-label>
+                <ion-input  color="ligth" value="{{formCadastroCliente.value['anoFabCadastro']}}" disabled="true"></ion-input>
+            
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">ANO MODELO</ion-label>
+                <ion-input  color="ligth" value="{{formCadastroCliente.value['anoModCadastro']}}" disabled="true"></ion-input>
+
+            
+            </ion-item>
+            <ion-button color="primary" (click)="vaiParaEtapa(3)" size="block">Editar</ion-button>
+        </ion-card-content> 
+        </ion-card>
+
+
+
+
+
+
+
+
+
+
+            
+        
+            <ion-button expand="full" (click)="login()" color="medium">FINALIZAR CADASTRO</ion-button>
+           
+
+             
+            
+        </div>
+
+</form>
+
+
+
+
+
+</ion-content>

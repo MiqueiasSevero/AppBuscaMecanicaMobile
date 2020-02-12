@@ -4,20 +4,23 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {DomSanitizer} from '@angular/platform-browser';
 @Component({
   selector: 'app-cadastrar',
-  templateUrl: './cadastrar.page.html',
-  styleUrls: ['./cadastrar.page.scss'],
+  templateUrl: './cadastro-usuario.page.html',
+  styleUrls: ['./cadastro-usuario.page.scss'],
 })
 export class CadastrarPage implements OnInit {
       statusTrFs:boolean = true;
-      etapaCadastro: number = 4;
+      etapaCadastro: number = 1;
       formCadastroCliente = new FormGroup({
       placaCadastro: new FormControl('', Validators.required),
       nomeCadastro: new FormControl('', Validators.required),
       sNomeCadastro: new FormControl('', Validators.required),
+      cpfCadastro: new FormControl('', Validators.required),
       senhaCadastro: new FormControl('', Validators.required),
       confirmaSenhaCadastro: new FormControl('', Validators.required),
       cepCadastro: new FormControl('', Validators.required),
       ruaCadastro: new FormControl('', Validators.required),
+      telefoneCadastro : new FormControl('', Validators.required),
+      celularCadastro : new FormControl('', Validators.required),
       bairroCadastro: new FormControl('', Validators.required),
       cidadeCadastro: new FormControl('', Validators.required),
       estadoCadastro: new FormControl('', Validators.required),
