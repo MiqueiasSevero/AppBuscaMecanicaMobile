@@ -31,21 +31,6 @@
                 
                 </ion-item>
 
-                <ion-item>
-                    <ion-label position="stacked">TELEFONE</ion-label>
-                    <ion-input  color="ligth" formControlName="telefoneCadastro"></ion-input>
-                
-                </ion-item>
-
-                <ion-item>
-                    <ion-label position="stacked">CELULAR</ion-label>
-                    <ion-input color="ligth" formControlName="celularCadastro"> </ion-input>
-                
-                </ion-item>
-
-
-
-
             
                 <ion-button expand="full" (click)="recebeDados()" color="primary">Proxímo</ion-button>
                 <ion-button expand="full" (click)="vaiParaEtapa(4)" color="primary" [hidden]="statusTrFs">Ir para final</ion-button>
@@ -54,28 +39,11 @@
 
         <div *ngIf="etapaCadastro === 2">
         <ion-button expand="full" (click)="voltaDadosAnterior()" color="primary">Anterior</ion-button>
-
-
-               
-
-                
-                <ion-item>
-                    <ion-label position="stacked">NOME DA OFICINA</ion-label>
-                    <ion-input color="ligth" formControlName="nomeOficina"></ion-input>
-                
-                </ion-item>
-                <ion-item>
-                    <ion-label position="stacked">CNPJ</ion-label>
-                    <ion-input color="ligth" formControlName="cnpjOficina"></ion-input>
-                
-                </ion-item>
-
                 <ion-item>
                     <ion-label position="stacked">CEP</ion-label>
-                    <ion-input color="ligth" formControlName="cepOficina"></ion-input>
+                    <ion-input color="ligth" formControlName="cepCadastro"></ion-input>
                 
                 </ion-item>
-
                 <ion-item>
                     <ion-label position="stacked">RUA</ion-label>
                     <ion-input color="ligth" formControlName="ruaCadastro"></ion-input>
@@ -106,9 +74,41 @@
                 <ion-button expand="full" (click)="recebeDados()" color="primary">Proxímo</ion-button>
         </div>
 
-      
-
         <div *ngIf="etapaCadastro === 3">
+            <ion-button expand="full" (click)="voltaDadosAnterior()" color="primary">Anterior</ion-button>
+            <ion-item>
+                <ion-label position="stacked">PLACA</ion-label>
+                <ion-input color="ligth" formControlName="placaCadastro"></ion-input>
+            
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">MARCA</ion-label>
+                <ion-input color="ligth" formControlName="marcaCadastro"></ion-input>
+            
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">MODELO</ion-label>
+                <ion-input   color="ligth" formControlName="modeloCadastro"></ion-input>
+            
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">ANO FABRICAÇÃO</ion-label>
+                <ion-input  color="ligth" formControlName="anoFabCadastro"></ion-input>
+            
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">ANO MODELO</ion-label>
+                <ion-input  color="ligth" formControlName="anoModCadastro"></ion-input>
+
+            
+            </ion-item>
+        
+            <ion-button expand="full" (click)="recebeDados()" color="primary">Proxímo</ion-button>    
+            
+        
+        </div>
+
+        <div *ngIf="etapaCadastro === 4">
             <ion-card>
                     <ion-card-content>
                         <ion-item>
