@@ -10,8 +10,7 @@ use db_app_buscaMec;
 create table tbl_user(
 		id_user int not null auto_increment primary key,
 		email varchar(255) not null,        
-        senha varchar(255) not null, 
-        id_endereco int not null,
+        senha varchar(255) not null,
         telefone varchar(16) not null,
         celular varchar(16) not null
         );
