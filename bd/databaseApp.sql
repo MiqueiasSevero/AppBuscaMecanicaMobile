@@ -74,9 +74,10 @@ create table tbl_agendadmento_serv(
         id_sevico int not null,
         data_serv date not null,
         hora_serv time not null,
+	status_agendamento char(1) DEFAULT 'A',
         foreign key (id_sevico) references tbl_oferta_servico(id_oferta)
 );
-
+# A aberto, C, Cancelado e F finalizado.
 
 
 	
