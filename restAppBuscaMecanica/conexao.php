@@ -1,7 +1,7 @@
 <?php
 // constante
 define("servidor","localhost");
-define("banco","buscamecanica");
+define("banco","db_app_buscaMec");
 define("porta","3306");
 define("usuario","root");
 define("senha","");

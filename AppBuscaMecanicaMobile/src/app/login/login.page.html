@@ -11,23 +11,24 @@
         <ion-img src="./assets/img/logoProvisorio.png"></ion-img>
        
     </div>
-  
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+
     <ion-item>
-        <ion-label position="stacked">Usuário</ion-label>
-        <ion-input color="ligth"><ion-icon name="person"></ion-icon></ion-input>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input color="ligth" formControlName="email"><!--<ion-icon name="person"></ion-icon>--></ion-input>
       
       </ion-item>
       <br>
       <ion-item>
           <ion-label position="stacked">Senha</ion-label>
           
-          <ion-input color="ligth"><ion-icon name="lock"></ion-icon></ion-input>
+          <ion-input color="ligth" formControlName="senha"><!--<ion-icon name="lock"></ion-icon>--></ion-input>
         </ion-item>
 
        
         <hr>
-        <ion-button expand="full" (click)="login()" color="primary">Login</ion-button>
+        <ion-button expand="full"  type="submit" [disabled]="formLogin.invalid" color="primary">Login</ion-button>
         <ion-button expand="full" (click)="ChamaCadastro()" color="primary">Cadastrar</ion-button>
       
-        
+      </form>     
 </ion-content>

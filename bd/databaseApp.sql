@@ -3,14 +3,15 @@ create database db_app_buscaMec;
 use db_app_buscaMec;
 
 
-        
+#        
 
 
            
 create table tbl_user(
 		id_user int not null auto_increment primary key,
 		email varchar(255) not null,        
-        senha varchar(255) not null,
+        senha varchar(255) not null, 
+        id_endereco int not null,
         telefone varchar(16) not null,
         celular varchar(16) not null
         );
@@ -74,10 +75,9 @@ create table tbl_agendadmento_serv(
         id_sevico int not null,
         data_serv date not null,
         hora_serv time not null,
-	status_agendamento char(1) DEFAULT 'A',
         foreign key (id_sevico) references tbl_oferta_servico(id_oferta)
 );
-# A aberto, C, Cancelado e F finalizado.
+
 
 
 	
